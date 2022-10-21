@@ -1,0 +1,60 @@
+{
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "project": "packages/*/tsconfig.json"
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": "@pancakeswap-libs/eslint-config-pancake",
+  "rules": {
+    "no-plusplus": 0,
+    "no-param-reassign": 0,
+    "prefer-destructuring": [
+      "warn",
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "no-underscore-dangle": 0,
+    "camelcase": "off",
+    "prefer-const": "off",
+    "no-var": "off",
+    "object-shorthand": "off",
+    "vars-on-top": "off",
+    "react/self-closing-comp": "off",
+    "prefer-template": "off",
+    "dot-notation": "off",
+    "no-console": "off",
+    "no-else-return": "off",
+    "no-nested-ternary": "off",
+    "no-unneeded-ternary": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/no-unused-prop-types": "off",
+    // Start temporary rules
+    // These rules are here just to keep the lint error to 0 during the migration to the new rule set
+    // They need to be removed and fixed as soon as possible
+    "@typescript-eslint/ban-ts-comment": [
+      1,
+      {
+        "ts-ignore": false,
+        "ts-nocheck": false
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "radix": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/require-default-props": 0,
+    "react/default-props-match-prop-types": 0,
+    "react-hooks/exhaustive-deps": 0
+    // End temporary rules
+  }
+}
